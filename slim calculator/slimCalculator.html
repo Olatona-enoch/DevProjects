@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        input{
+            border: 0;
+            border-radius: 0;
+            background-color: transparent;
+            outline: none;
+            appearance: none;
+            text-align: left;
+        }
+        input:hover,
+        input:active,
+        input:focus{
+            outline: none;
+        }
+        html{
+            font-size: 175%;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+        body{
+            align-items: center;
+            background-image:linear-gradient(236deg, #eb74bf,#acb6e5) ;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+        }
+        .container {
+            width: 50%;
+        }
+        .calculator{
+            border-radius: 12px;
+            box-shadow: 0 0 40px 0px rgba(red, green, blue, alpha);
+            margin: auto, 2em, auto, 15em;
+            overflow: hidden;
+        }
+        .calculator_display{
+            background-color: #222222;
+            color: #fff;
+            padding:  1em 0.75em;
+            text-align: right;
+        }   
+        .calculator_display input{
+            color: whitesmoke;
+            text-align: right;
+            width: 100%;
+            font-size: 1.714285714em;
+
+        }    
+                     
+        .calculator_keys{
+            background-color: #999;
+            display:grid;
+            grid-gap:1px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .calculator_keys > *{
+            background-color: #fff;
+            padding: 0.5em 1.5em;
+            position: relative;
+            text-align: center;
+        }
+        
+        .key_operator{
+            background-color: #eee;
+        }
+        .key_equal{
+            background-image: linear-gradient(to bottom,#fe886a, #ff7033);
+            grid-column: -2;
+            grid-row:3 / span 4;
+        }
+    </style>
+    <title>Slim Calculator</title>
+</head>
+<body>
+    <div class="container">
+    <div class="calculator">
+        <form>
+            <div class="calculator_display">
+               <input type="text" name="display">
+            </div>
+            <div class="calculator_keys">
+                <input type="button" value="+" onclick="display.value +='+' "class="key_operator">
+                <input type="button" value="-" onclick="display.value +='-' "class="key_operator">
+                <input type="button" value="*" onclick="display.value +='*' "class="key_operator">
+                <input type="button" value="/" onclick="display.value +='/' "class="key_operator">
+                 <input type="button" value="7" onclick="display.value +='7' ">
+                 <input type="button" value="8" onclick="display.value +='8' ">
+                 <input type="button" value="9" onclick="display.value +='9' ">
+                 <input type="button" value="CE" onclick="display.value = display.value.toString().slice (0,-1)"class="cancel">
+                 <input type="button" value="4" onclick="display.value +='4' ">
+                 <input type="button" value="5" onclick="display.value +='5' ">
+                 <input type="button" value="6" onclick="display.value +='6' ">
+                 <input type="button" value="1" onclick="display.value +='1' ">
+                 <input type="button" value="2" onclick="display.value +='2' ">
+                 <input type="button" value="3" onclick="display.value +='3' ">
+                 <input type="button" value="0" onclick="display.value +='0' ">
+                 <input type="button" value="." onclick="display.value +='.' ">
+                 <input type="button" value="AC" onclick="display.value =' ' ">
+                 <input type="button" value="=" onclick="display.value = eval(display.value) " class="key_equal">
+
+           </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
