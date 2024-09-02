@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading screen</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image:linear-gradient(236deg, #6d104b,#071241) ;
+        }
+        .loading{
+            max-width: 50%;
+            line-height: 1.4;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .loading__author{
+            font-weight: lighter;
+            font-size: 0.9rem;
+            color: rgb(157, 81, 89);
+            margin: 0.6rem 0.2rem;
+            display: block;
+        }
+        .loading__amin{
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            border:10px solid rgba(189, 189, 189, 0.25);
+            border-left-color: rgb(24, 16, 66) ;
+            border-top-color: blue ;
+            border-radius: 50%;
+            animation: rotate 600ms infinite linear;
+        }
+        @keyframes rotate { to { transform: rotate(1turn)}}
+    </style>
+</head>
+<body>
+    <section class="loading">Gathering elements.......
+        <p>   </p>
+        TIPS: Number key + operator + Number key then equal key
+
+    <span class="loading__author"> ---------loading----------</span>
+
+    <span class="loading__amin"></span>
+   
+    </section>
+
+</body>
+</html>
